@@ -65,7 +65,7 @@ def search_id_on_slug(cat_slug):
 
 def category_posts(request, category_slug):
     template = "blog/category.html"
-    context = {"post_category": posts[search_id_on_slug(category_slug)]}
+    context = {"post_category": category_slug}
     return render(request, template, context)
 
 
