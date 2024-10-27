@@ -56,13 +56,6 @@ def post_detail(request, id):
     return render(request, template, context)
 
 
-def search_id_on_slug(cat_slug):
-    for i in posts:
-        if cat_slug == i["category"]:
-            return i["id"]
-    return -1
-
-
 def category_posts(request, category_slug):
     template = "blog/category.html"
     context = {"post_category": category_slug}
